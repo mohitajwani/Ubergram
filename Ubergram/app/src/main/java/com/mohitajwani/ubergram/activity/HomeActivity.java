@@ -3,6 +3,7 @@ package com.mohitajwani.ubergram.activity;
 import android.Manifest;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.Toolbar;
 
 import com.mohitajwani.ubergram.R;
@@ -33,7 +34,7 @@ public class HomeActivity extends BaseActivity {
     }
     private void checkStoragePermissions() {
         if (mStoragePermissions == null) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 mStoragePermissions = new PermissionService(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 165, new PermissionService.IPermissionsService() {
                     @Override
                     public void onPermissionGranted() {
@@ -54,6 +55,15 @@ public class HomeActivity extends BaseActivity {
             initializeFragment();
         } else {
             mStoragePermissions.requestPermission();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (mStoragePermissions != null) {
+            mStoragePermissions.processResult(requestCode, permissions, grantResults);
+        } else {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }
