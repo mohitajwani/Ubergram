@@ -48,4 +48,5 @@ time and a lesser creative mind. The app has the following structure.
 * Handle error codes with `Api` class and send meaningful callbacks.
 * Improve Design to make it more fluid and follow Material Guidelines.
 * Write UI and Unit Test cases. (Will need use of Third Party Libraries, hence avoided)
+* Add Proguard for code obfuscation.
 * Refactor code to follow a Clean Architecture guideline and improve usage of interfaces and dependency injection to avoid tight coupling between classes.
