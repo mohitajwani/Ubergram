@@ -8,35 +8,35 @@ time and a lesser creative mind. The app has the following structure.
 
 * `Ubergram`
 * activity
-    * `BaseActivity`
+    * `BaseActivity` *(Base class for handling common functionality for all `Activities`)*
     * `HomeActivity`
 * adapter
-    * `SearchImagesAdapter`
+    * `SearchImagesAdapter` *(Adapter class for handling data in the Home Screen)*
 * fragment
-    * `BaseFragment`
+    * `BaseFragment` *(Base class for handling common functionality for all `Fragments`)*
     * `HomeFragment`
 * interfaces
     * `ActivityDestroyedListener`
     * `CurrentActivityListener`
 * models
-    * `FlickrPhoto`
-    * `SearchPhotosResponse`
+    * `FlickrPhoto` *(Model for Flickr Photo Object)*
+    * `SearchPhotosResponse` *(Model for API Response)*
 * network
     * api
-        * `Api`
+        * `Api` *(Base class for making API Call)*
         * `GetSearchImagesApi`
     * asyncTask
-        * `AsyncTaskListener`
+        * `AsyncTaskListener` *(Listener Interface for handling common functionality for `AsyncTask` callbacks)*
         * `GetSearchImagesAsyncTask`
     * image
-        * `FileCache`
-        * `ImageLoader`
-        * `MemoryCache`
+        * `FileCache` *(Class for handling File Cache while Loading Images from storage)*
+        * `ImageLoader` *(Class for handling Image Loading)*
+        * `MemoryCache` *(Class to maintain memory cache while Loading Images via network)*
         * `Utils`
     * parser
-        * `SearchImagesApiJSONParser`
+        * `SearchImagesApiJSONParser` *(Class for parsing API response)*
 * service
-    * `PermissionService`
+    * `PermissionService` *(Class for handling Dynamic Permissions)*
 * utils
     * `AsyncTaskUtil`
     * `FragmentUtil`
