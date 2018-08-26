@@ -41,3 +41,11 @@ time and a lesser creative mind. The app has the following structure.
     * `AsyncTaskUtil`
     * `FragmentUtil`
     * `NetworkUtil`
+    
+## Probable Improvements for future
+* Improve Image Caching Library to use local cache and avoid external storage.
+* Use Serialization/Deserialization libraries to avoid writing long parser classes.
+* Handle error codes with `Api` class and send meaningful callbacks.
+* Improve Design to make it more fluid and follow Material Guidelines.
+* Write UI and Unit Test cases. (Will need use of Third Party Libraries, hence avoided)
+* Refactor code to follow a Clean Architecture guideline and improve usage of interfaces and dependency injection to avoid tight coupling between classes.
